@@ -1,13 +1,13 @@
 import { ReactNode } from "react";
+import styles from "../stlyes/Button.module.css"
 
 interface Props {
   children: ReactNode;
   onClick: () => void;
-  color?: "primary" | "secondary" | "danger";
 }
-const Button = ({ children, onClick, color="primary" }: Props) => {
+const Button = ({ children, onClick}: Props) => {
   return (
-    <button className={"btn btn-" + color} onClick={onClick}>
+    <button className={styles.button} onClick={onClick}>
       {children}
     </button>
   );
